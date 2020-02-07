@@ -23,11 +23,9 @@ from mypy.types import TypeOfAny, UnionType
 
 from mypy_django_plugin.lib import fullnames, helpers
 
-try:
-    from django.contrib.postgres.fields import ArrayField
-except ImportError:
-    class ArrayField:  # type: ignore
-        pass
+
+class ArrayField:  # type: ignore
+    pass
 
 if TYPE_CHECKING:
     from django.apps.registry import Apps  # noqa: F401
