@@ -64,7 +64,12 @@ IGNORED_ERRORS = {
         'Incompatible types in string interpolation',
         '"None" has no attribute',
         'has no attribute "assert',
-        'Unsupported dynamic base class'
+        'Unsupported dynamic base class',
+        'error: "HttpResponse" has no attribute "streaming_content"',
+        'error: "HttpResponse" has no attribute "context_data"',
+    ],
+    'admin_inlines': [
+        'error: "HttpResponse" has no attribute "rendered_content"',
     ],
     'admin_utils': [
         '"Article" has no attribute "non_field"',
@@ -104,6 +109,7 @@ IGNORED_ERRORS = {
     ],
     'builtin_server': [
         '"ServerHandler" has no attribute',
+        'Incompatible types in assignment (expression has type "Tuple[BytesIO, BytesIO]"',
     ],
     'bulk_create': [
         'has incompatible type "List[Country]"; expected "Iterable[TwoFields]"',
@@ -164,7 +170,8 @@ IGNORED_ERRORS = {
         'Incompatible types in assignment (expression has type "Optional[Any]", variable has type "FloatModel")'
     ],
     'decorators': [
-        '"Type[object]" has no attribute "method"'
+        '"Type[object]" has no attribute "method"',
+        'Value of type variable "_T" of function cannot be "descriptor_wrapper"'
     ],
     'expressions_window': [
         'has incompatible type "str"'
@@ -191,7 +198,7 @@ IGNORED_ERRORS = {
     ],
     'from_db_value': [
         '"Cash" has no attribute',
-        'Argument 1 to "__str__" of "Decimal"',
+        '"__str__" of "Decimal"',
     ],
     'get_object_or_404': [
         'Argument 1 to "get_object_or_404" has incompatible type "str"; '
@@ -240,6 +247,7 @@ IGNORED_ERRORS = {
     ],
     'middleware': [
         re.compile(r'"(HttpRequest|WSGIRequest)" has no attribute'),
+        'Incompatible types in assignment (expression has type "HttpResponseBase", variable has type "HttpResponse")',
     ],
     'many_to_many': [
         '(expression has type "List[Article]", variable has type "Article_RelatedManager2',
@@ -276,6 +284,7 @@ IGNORED_ERRORS = {
         '"ImageFile" has no attribute "was_opened"',
         'Incompatible type for "size" of "FloatModel" (got "object", expected "Union[float, int, str, Combinable]")',
         'Incompatible type for "value" of "IntegerModel" (got "object", expected',
+        '"Child" has no attribute "get_foo_display"',
     ],
     'model_forms': [
         '"render" of "Widget"',
@@ -376,6 +385,9 @@ IGNORED_ERRORS = {
     'settings_tests': [
         'Argument 1 to "Settings" has incompatible type "Optional[str]"; expected "str"'
     ],
+    'shortcuts': [
+        'error: "Context" has no attribute "request"',
+    ],
     'signals': [
         'Argument 1 to "append" of "list" has incompatible type "Tuple[Any, Any, Optional[Any], Any]";'
     ],
@@ -387,7 +399,7 @@ IGNORED_ERRORS = {
         '"RequestSite" of "Union[Site, RequestSite]" has no attribute "id"',
     ],
     'syndication_tests': [
-        'List or tuple expected as variable arguments'
+        'Argument 1 to "add_domain" has incompatible type "*Tuple[object, ...]"',
     ],
     'sessions_tests': [
         'Incompatible types in assignment (expression has type "None", variable has type "int")',
@@ -428,6 +440,7 @@ IGNORED_ERRORS = {
     'test_client_regress': [
         '(expression has type "Dict[<nothing>, <nothing>]", variable has type "SessionBase")',
         'Unsupported left operand type for + ("None")',
+        'Argument 1 to "len" has incompatible type "Context"; expected "Sized"',
     ],
     'transactions': [
         'Incompatible types in assignment (expression has type "Thread", variable has type "Callable[[], Any]")'

@@ -15,7 +15,7 @@ This package contains [type stubs](https://www.python.org/dev/peps/pep-0561/) an
 pip install django-stubs
 ```
 
-See [Configutation](#configuration) section to get started.
+See [Configuration](#configuration) section to get started.
 
 
 ## Configuration
@@ -83,7 +83,7 @@ when you will try to use `QuerySet[MyModel]` or `Manager[MyModel]`.
 
 This happens because Django classes do not support [`__class_getitem__`](https://www.python.org/dev/peps/pep-0560/#class-getitem) magic method.
 
-You can use strings instead: `'QuerySet[MyModel]'` and `'Manager[MyModel'`, this way it will work as a type for `mypy` and as a regular `str` in runtime.
+You can use strings instead: `'QuerySet[MyModel]'` and `'Manager[MyModel]'`, this way it will work as a type for `mypy` and as a regular `str` in runtime.
 
 Currently we [are working](https://github.com/django/django/pull/12405) on providing `__class_getitem__` to the classes where we need them.
 
